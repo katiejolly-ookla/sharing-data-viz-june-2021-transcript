@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Designing graphics to post online</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Katie Jolly (@katiejolly6)" />
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Designing graphics to post online
+## What I’ve learned from the (sometimes helpful) comments on my maps from Twitter and Reddit
+### Katie Jolly (<span class="citation">@katiejolly6</span>)
+### CascadiaRConf 2021
+
+---
+
+
+
+
+
+
+
+class: inverse center middle
+
+# Why (and how) should we do data visualization critiques?
+
+One thing that's been mentioned many times today is that "R users aren't designers" which I generally agree with and think is perfectly fine. That being said, I think we can take a lot of lessons from critiques in the design world! By this I mean the process by which you get feedback and in progress work. I really love posting data visualizations online (mostly on my Twitter account). I find that this is a great way to get feedback from other people. Often people have expertise in areas that are new to me or I want to learn more about. Over time I've learned some lessons from sharing my work that I think would be helpful for other people. Today I'll talk a little bit about those lessons with some examples of comments from social media. If social media isn't your thing-- that is fine! I think these lessons can also be applied to presenting in-progress work at R meetups, in work Slack, or any other forum for sharing your projects. 
+
+---
+class: split-four
+
+.pull-left[
+
+ &lt;img src="https://pbs.twimg.com/media/EnjmvvNXYAIbw9C?format=jpg&amp;name=4096x4096" alt="Map of rivers that are also state boundaries. Most of these are in the lower midwest and south" class="centerimg" width="90%" height="150%" &gt;
+ 
+ &lt;br&gt;
+ &lt;br&gt;
+ 
+ 
+ &lt;img src="https://raw.githubusercontent.com/katiejolly/30-day-maps-2020/main/20-population/urbanization_virginia.png" alt="Map of Virginia showing the percent of people in a census tract that think they live in a rural, urban, or suburban area. Most of the state is rural. Areas around DC, Roanoke, and Richmond are highlighted to the side of the map." width="80%" height="100%"&gt; 
+ ]
+ 
+ .pull-right[
+ 
+ &lt;br&gt;
+ &lt;br&gt;
+ &lt;br&gt;
+ &lt;br&gt;
+ &lt;br&gt;
+ ## Some examples I'll discuss critiques for
+
+ 
+
+ ]
+
+These are two examples from the 30 day map challenge in November 2020. I aimed to make maps in only a few hours (time flies!) and just did as many days as I could. I think I did about 10 in the end. My suburbs map was posted in many places-- including a popular subreddit for maps-- which gave me tons of examples of helpful (and not as helpful) comments
+---
+class: inverse center middle
+
+# Not all criticism is helpful or correct
+
+&lt;style&gt;
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+&lt;/style&gt;
+
+I think the *most important* lesson to remember is that not all criticism is helpful. If you are giving critiques for someone else, first see if they're actually interested in hearing it. And above all be kind-- even if you don't love someone else's work, give suggestions rather than exclusively criticisms. And remember that your opinion (say, what to highlight or what type of chart to use) isn't always correct (this one can be tough). 
+
+Alright, with that let's go into some lessons I've learned via the comment section. 
+  
+---
+
+# People love to find themselves and compare to others (especially when it's a map)
+
+ &lt;img src="https://raw.githubusercontent.com/katiejolly/30-day-maps-2020/main/20-population/urbanization_virginia.png" alt="Map of Virginia showing the percent of people in a census tract that think they live in a rural, urban, or suburban area. Most of the state is rural. Areas around DC, Roanoke, and Richmond are highlighted to the side of the map." width="35%" height="50%" class="centerimg"&gt; 
+
+On Reddit: 
+
+&gt; That southeast part of Richmond that is rural is called Varina and it is exactly like this map depicts. This oddly rural area abutting the city where you can go from near downtown to the middle of a bean field in a tenth of a mile or two.
+
+When I made this map I wasn't really sure what would come of it. Turns out (and this wasn't surprising) what clicked the most for users was finding an area familiar to them and relating their own experience. People had *so many* thoughts on what should and shouldn't be classified a certain way. And many other people had personal experiences that resonated more than I was expecting! I've learned that people will engage much more with visualizations that mean something to them.
+
+---
+
+# Annotations are great for guiding a reader's understanding
+
+&lt;img src="img/map_annotations.png" alt="Same image as previous slide with annotations that say I should have included a note about no data areas and better labels on the legends" class="centerimg" width="45%"&gt;
+
+I quickly found that people weren't always taking away the messages that I wanted them to. One of the most common critical comments was "hey! there's no way [insert area here] should be 100% suburban! This is a mistake." To me, the legend was clear (and also made in a few minutes, so bear with me here). The labels were right-aligned, thus marking the upper limit of each category. A block with the darkest color in a category is anywhere from 80 to 100%, not exactly 100. This was very unclear to a lot of readers and more labels would have helped tremendously. Similarly, I should have noted that white areas on the map were no data. 
+
+---
+
+# Share your code because people may have tips you never thought to ask for
+
+&lt;img src="img/pr_screenshot.png" alt="GitHub pull request UI where someone submitted a PR to edit my code to be more efficient" class="centerimg" width="40%"&gt;
+
+I created a public GitHub repository for all my work because that's how I save things. I was not expecting people to really look at it! I was pleasantly surprised to see a pull request show up. Someone had actually read through my code and noticed I was filtering a huge dataset *after* reading it in, making the process slower than it could have been. They opened a pull request and made the necessary edits-- I don't know when I would have learned this trick otherwise! Data visualization critiques are not limited to the design itself, code critiques are also helpful. 
+---
+
+# There are many people online with niche insights
+
+&lt;img src="https://pbs.twimg.com/media/EnjmvvNXYAIbw9C?format=jpg&amp;name=4096x4096" alt="Map of rivers that are also state boundaries. Most of these are in the lower midwest and south" class="centerimg" width="40%" height="55%" &gt;
+
+Alex Fries on Twitter:
+ &gt; Great map! I’ve looked at the dataset you used for it before—off the top of my head, I know it’s missing the Perdido River on the AL-FL border. There’s also the Pigeon, Pine, and Granite Rivers on the eastern MN-ON border, though those are easy to miss with all the lakes there!
+ 
+This is one of my favorite lessons/reasons for posting work online. Alex had worked with this data previously and knew there was some missing data. He kindly shared his knowledge and I made the changes. I really appreciate when people take the time to give constructive critiques. He easily could have just said something along the lines of "you're missing data" which wouldn't have gotten me much farther along. 
+ 
+---
+ 
+# More reading/links I've mentioned:
+ 
+* Presentation on accessibility for data visualization by Silvia Canelón and Liz Hare https://github.com/spcanelon/csvConf2021 
+ 
+* Helpful alt text formula from Amy Cesal https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81
+ 
+* Post on data visualization citiques by Alli Torban https://www.tableau.com/about/blog/2019/5/critiquing-data-visualizations-channel-empathy-and-be-productive
+
+* Policy Viz data visualization critiques https://policyviz.com/2021/06/03/new-video-series-data-visualization-critiques/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
